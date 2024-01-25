@@ -1,8 +1,12 @@
 import { Avatar } from "@mui/material";
 import React from "react";
 import "./Suggestions.css";
+import { useUserContext } from "../features/userContext";
 
 function Suggestions() {
+    const { loginUser } = useUserContext();
+    const currentUser = loginUser();
+
     return (
         <div className="suggestions">
         <div className="suggestions__title">Suggestions for you</div>

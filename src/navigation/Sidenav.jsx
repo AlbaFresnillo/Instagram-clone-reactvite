@@ -9,16 +9,15 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Avatar } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
-import { logoutUser } from "../features/userSlice";
 import { auth } from "../firebase";
+import { useUserContext } from "../features/userContext";
 
 function Sidenav() {
-    const user = useSelector((state) => state.data.user.user);
-    const dispatch = useDispatch();
+    const { user, logoutUser } = useUserContext();
+
     const handleLogout = () => {
-        dispatch(logoutUser());
+        logoutUser();
         signOut(auth);
     };
 
