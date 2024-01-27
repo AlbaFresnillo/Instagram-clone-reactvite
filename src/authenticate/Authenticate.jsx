@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./Authenticate.css";
 import Login from "./Login";
 import Signup from "./Signup";
-import { useAppContext } from "../app/appContext";
+import { useUserContext } from "../features/userContext";
 
 function Authenticate() {
-    const { user } = useAppContext();
+    const { user } = useUserContext();
     const [active, setActive] = useState("login");
 
     const handleChange = () => {

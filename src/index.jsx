@@ -2,14 +2,17 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { AppProvider } from './app/appContext';
+import { UserProvider } from './features/userContext';
 import Sidenav from './navigation/Sidenav';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AppProvider>
-      <App />
-      <Sidenav />
-    </AppProvider>
+    <UserProvider>
+      <Router>
+        <App />
+        
+      </Router>
+    </UserProvider>
   </React.StrictMode>,
 );

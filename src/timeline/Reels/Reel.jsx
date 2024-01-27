@@ -9,8 +9,7 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import { useUserContext } from "../../features/userContext";
 
 function Reel({ user, postImage, likes, timestamp }) {
-    const { loginUser } = useUserContext();
-    const currentUser = loginUser();
+    //const { user } = useUserContext();
 
     return (
         <div className="reel">

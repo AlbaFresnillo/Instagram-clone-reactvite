@@ -4,8 +4,7 @@ import "./Suggestions.css";
 import { useUserContext } from "../features/userContext";
 
 function Suggestions() {
-    const { loginUser } = useUserContext();
-    const currentUser = loginUser();
+    const { user } = useUserContext();
 
     return (
         <div className="suggestions">
