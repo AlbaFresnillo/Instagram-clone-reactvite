@@ -66,18 +66,16 @@ function Sidenav() {
 
                 <button className="sidenav__button">
                     <Avatar>
-                        {user.username ? user.username.charAt(0).toUpperCase() : "A"}
+                        {firstLetter}
                     </Avatar>
-                <span>
-                    {user.username}{" "}
-                <button onClick={handleLogout} className="logout__button">
-                Logout
+                    <span>{username}</span>
                 </button>
-                </span>
+
+                <button onClick={handleLogout} className="logout__button">
+                    Logout
                 </button>
 
             </div>
-
             <div className="sidenav__more">
                 <button className="sidenav__button">
                     <MenuIcon />

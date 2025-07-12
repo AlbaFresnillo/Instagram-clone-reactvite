@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { UserProvider } from './features/userContext';
+import Sidenav from './navigation/Sidenav';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
